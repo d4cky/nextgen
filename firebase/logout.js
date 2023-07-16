@@ -1,9 +1,17 @@
 import { auth } from "./config.js";
-import { signOut } from "firebase/auth";
+import { signOut } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
 
-const auth = getAuth();
-signOut(auth).then(() => {
-  // Sign-out successful.
-}).catch((error) => {
-  // An error happened.
-});
+const logoutBtn = document.getElementById("logout-btn");
+
+const handleLogout = () => {
+  signOut(auth)
+    .then(() => {
+      alert("logout");
+      window.location.replace("/login.html");
+    })
+    .catch((error) => {
+      alert(error.code);
+    });
+};
+
+logoutBtn.addEventListener("click", handleLogout);

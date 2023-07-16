@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "nexgen-bb707.appspot.com",
   messagingSenderId: "286310255711",
   appId: "1:286310255711:web:4c04562771b20e8377dfea",
-  measurementId: "G-16ZW71F01V",
+  measurementId: "G-16ZW71F01V"
 };
 
 // Initialize Firebase
